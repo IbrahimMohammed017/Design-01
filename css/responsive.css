@@ -12,6 +12,20 @@
     height: 150px;
   }
 
+  .images-item-1,
+  .images-item-5 {
+    width: 35vw;
+  }
+
+  .images-item-2,
+  .images-item-4 {
+    width: 40vw;
+  }
+
+  .images-item-3 {
+    width: 45vw;
+  }
+
   .images-controls button {
     margin: 0 10px;
   }

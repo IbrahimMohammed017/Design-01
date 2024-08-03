@@ -146,13 +146,15 @@ a, h1, h2, h3, h4, h5, h6, i {
 /* *************************** */
 .img-box {
   height: 300px;
-  margin-top: 40px;
+  margin-top: 60px;
+  overflow: hidden;
+  margin-bottom: 60px;
   position: relative;
 }
 
 .img-item {
-  width: 20vw;
   z-index: 1;
+  width: 20vw;
   position: absolute;
   background-size: contain;
   transition: all 0.3s ease-in-out;

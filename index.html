@@ -7,18 +7,17 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/all.min.css">
-  <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/hover.css">
   <link rel="stylesheet" href="css/stylesheet.css">
-  <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <title>Document</title>
 </head>
 
-<body id="content" style="height: 4000px;">
+<body id="content">
   <!-- Header -->
-  <header>
+  <header id="header">
     <!-- 1- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
@@ -32,36 +31,54 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="#header">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#portofolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#about-me">About Me</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                Dropdown
+                Services
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Link</a></li>
-                <li><a class="dropdown-item" href="#">Link</a></li>
+                <li>
+                  <a class="dropdown-item" href="#header">
+                    Web Design
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#header">
+                    Data Analysis
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#header">
+                    Logo Design
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#header">
+                    QR-Code Design
+                  </a>
+                </li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li>
+                  <a class="dropdown-item" href="#services">
+                    Services
+                  </a>
+                </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#contacu-us">Contact Us</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
@@ -69,11 +86,9 @@
     <!-- 2- Slider -->
     <div class="slider">
       <div class="overlay">
-        <div class="container">
+        <div class="container overlay-text text-uppercase">
           <h1 class="mb-4">Ibrahim Mohammed</h1>
-          <p class="lead">
-            I am A Website Designer, I Designing Interactive and attractive websites By JavaScript & Bootstrap
-          </p>
+          <p class="lead slider-text"></p>
         </div>
       </div>
     </div>
@@ -103,7 +118,7 @@
   </header>
 
   <!-- Services -->
-  <section class="services">
+  <section id="services" class="services">
     <div class="container">
       <h2 class="section-head text-center">Services</h2>
       <p class="text-center">
@@ -159,7 +174,7 @@
   </section>
 
   <!-- Portfolio -->
-  <section class="portfolio text-center">
+  <section id="portofolio" class="portfolio text-center">
     <div class="container">
       <h2 class="section-head">Portfolio</h2>
       <p>
@@ -199,30 +214,82 @@
   </section>
 
   <!-- About -->
-  <section class="services text-center">
+  <section id="about-me" class="about text-center">
     <div class="container">
       <h2 class="section-head">About</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
+      <div class="row">
+        <div class="col-12 col-md-4 img-about">
+          <img src="images/about.png" alt="Test" class="img-thumbnail rounded">
+        </div>
+        <div class="col-12 col-md-8 text-start about-text d-flex justify-content-center flex-column">
+          <p class="p1 fw-bold">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic dicta, omnis quae dolorum alias, laborum quo
+            eos delectus numquam a laudantium ipsum temporibus obcaecati et atque quod sequi quam maiores!
+          </p>
+          <hr>
+          <p class="p2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia id eaque ipsam sapiente quos exercitationem
+            officiis culpa fuga ut velit, impedit numquam odit nostrum rem, modi voluptatibus dicta alias veniam!
+            <br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, minima ex sed saepe tenetur ipsa minus
+            quos sapiente consequatur, officia debitis veritatis expedita repellat, magnam optio corrupti nemo dolorem
+            pariatur.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="services text-center">
+  <section class="contact text-center">
     <div class="container">
       <h2 class="section-head">Contact</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
+      <div class="info">
+        <p class="label lead">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <a href="mailto:Ibrahimmohammed017@gmail.com?subject=Contact" class="link">Ibrahimmohammed017@gmail.com</a>
+        <div class="social d-flex align-items-center justify-content-center">
+          Find Us On Social Media Network
+          <i class="fa-solid fa-hand-back-point-right"></i>
+          <a href="https://www.facebook.com/IbrahimMohammed017">
+            <i class="fa-brands fa-square-facebook" style="color: #0165e1;"></i>
+          </a>
+          <a href="https://instagram.com/ibrahimmohammed017">
+            <i class="fa-brands fa-square-instagram" style="color: #d6249f ;"></i>
+          </a>
+          <a href="https://twitter.com/Hemamadred017">
+            <i class="fa-brands fa-square-x-twitter" style="color: #000;"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer id="contacu-us" class="text-center">
+    <div class="container">
+      Copyright &copy 2022, Designed By
+      <a href="https://www.facebook.com/IbrahimMohammed017" target="_blank">Ibrahim</a> &reg;
+    </div>
+  </footer>
+
+  <!-- Global Section -->
+  <div class="up-button">
+    <a href="#header">
+      <i class="fa-solid fa-chevrons-up fa-lg"></i>
+    </a>
+  </div>
 
   <!-- JavaScript Files -->
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/plugin.js"></script>
   <script src="js/main.js"></script>
 </body>
 

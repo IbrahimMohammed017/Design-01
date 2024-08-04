@@ -6,6 +6,12 @@
   --fontColor: #333;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -20,6 +26,7 @@ header {
 }
 
 section {
+  padding-top: 60px;
   margin: 40px auto;
 }
 
@@ -91,15 +98,34 @@ a, h1, h2, h3, h4, h5, h6, i {
   color: var(--mainColor) !important;
 }
 
+nav .dropdown-menu {
+  border-color: var(--mainColor);
+  background: var(--supColor);
+}
+
+nav .dropdown-menu .dropdown-divider {
+  border-color: var(--mainColor);
+}
+
+nav .dropdown-menu .dropdown-item {
+  color: var(--mainColor);
+}
+
+nav .dropdown-menu .dropdown-item:hover,
+nav .dropdown-menu .dropdown-item:active,
+nav .dropdown-menu .dropdown-item:focus {
+  background: var(--backColor);
+}
+
 /* End Navbar */
 
 /* Start Slider */
 
 .slider {
-  color: var(--backColor);
   height: 100vh;
   position: relative;
   background-size: cover;
+  color: var(--backColor);
   background: url(../images/landing.png);
 }
 
@@ -115,6 +141,10 @@ a, h1, h2, h3, h4, h5, h6, i {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+}
+
+.slider .overlay .overlay-text {
+  letter-spacing: 2px;
 }
 
 /* End Slider */
@@ -141,9 +171,8 @@ a, h1, h2, h3, h4, h5, h6, i {
 
 /* End Services */
 
+/* Start Portfolio */
 
-
-/* *************************** */
 .img-box {
   height: 300px;
   margin-top: 60px;
@@ -299,3 +328,112 @@ a, h1, h2, h3, h4, h5, h6, i {
 .images-controls-next:hover::before {
   right: -40%;
 }
+
+/* End Portfolio */
+
+/* Start About */
+
+.about .img-about img {
+  border: none;
+  margin-bottom: 25px;
+}
+
+.about .about-text hr {
+  width: 50%;
+  opacity: 1;
+  border-width: 3px;
+  display: inline-block;
+  border-color: var(--mainColor);
+}
+
+.about .about-text p {
+  line-height: 2;
+}
+
+.about .about-text .p1 {
+  font-size: 20px;
+}
+
+/* End About */
+
+/* Start Contact */
+
+.contact {
+  margin-bottom: 0;
+  background: var(--backColor);
+}
+
+.contact .info {
+  padding-top: 50px;
+}
+
+.contact .info .label {
+  font-size: 3vw;
+  font-weight: bold;
+  color: var(--mainColor);
+}
+
+.contact .info a {
+  font-size: 4vw;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--supColor);
+}
+
+.contact .info a:hover {
+  color: var(--mainColor);
+  text-decoration: underline;
+}
+
+.contact .info .social {
+  font-size: 2vw;
+  margin-top: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  color: var(--fontColor);
+}
+
+.contact .info .social i {
+  margin-left: 5px;
+}
+
+.contact .info .social a {
+  font-size: 1.5vw;
+  margin-left: 10px;
+}
+
+/* End Contact */
+
+/* Start Footer */
+
+footer {
+  margin: 0;
+  padding: 15px 0;
+  font-size: 1.5vw;
+  color: var(--backColor);
+  background: var(--supColor);
+}
+
+footer a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--mainColor);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* End Footer */
+
+/* Start Global Section */
+
+.up-button {
+  right: 15px;
+  z-index: 10;
+  bottom: 15px;
+  font-size: 35px;
+  position: fixed;
+}
+
+/* End Global Section */

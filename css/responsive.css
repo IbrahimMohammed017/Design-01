@@ -34,12 +34,20 @@
   .images-controls-next::before {
     display: none;
   }
+
+  footer {
+    font-size: 4vw;
+  }
 }
 
 /* Small devices (tablets, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .img-box {
     height: 180px;
+  }
+
+  footer {
+    font-size: 3vw;
   }
 }
 
@@ -48,12 +56,20 @@
   .img-box {
     height: 200px;
   }
+
+  footer {
+    font-size: 2.5vw;
+  }
 }
 
 /* Large devices (large desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .img-box {
     height: 200px;
+  }
+
+  footer {
+    font-size: 2.5vw;
   }
 }
 

@@ -1,11 +1,15 @@
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .section-head {
-    font-size: 75px;
+  .slider h1 {
+    font-size: 6vw;
   }
 
-  .section-head+p {
-    font-size: 16px;
+  .slider p {
+    font-size: 3vw;
+  }
+
+  .section-head {
+    font-size: 75px;
   }
 
   .img-box {
@@ -35,6 +39,15 @@
     display: none;
   }
 
+  .contact .info .label,
+  .contact .info a {
+    font-size: 3.5vw;
+  }
+
+  .contact .info .social {
+    font-size: 3vw;
+  }
+  
   footer {
     font-size: 4vw;
   }

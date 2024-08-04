@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", function () {
     if (window.scrollY >= 125) {
-      navbar.style.background = "var(--supColor)";
+      navbar.style.background = "var(--mainColor)";
       navbar.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
     } else {
       navbar.style.background = "transparent";
@@ -135,4 +135,109 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateText();
   blinkCursor();
+});
+
+// Up Button
+window.addEventListener("scroll", function () {
+  var button = document.querySelector(".up-button");
+  if (window.scrollY >= 1000) {
+    button.classList.add("visible");
+  } else {
+    button.classList.remove("visible");
+  }
+});
+
+// Themes
+// Event listener for list items
+document.querySelectorAll("ul li").forEach(function (item) {
+  item.addEventListener("click", function () {
+    var themeClass = item.getAttribute("data-theme");
+    // Hide all logos and show only the selected theme logo
+    document.querySelectorAll(".navbar-brand img").forEach(function (img) {
+      img.style.display = "none";
+    });
+    document.querySelector(themeClass).style.display = "block";
+
+    // Define the CSS variables for each theme
+    var themeCSS = {
+      ".theme1": {
+        "--mainColor": "#572671",
+        "--supColor": "#311440",
+        "--bgColor": "#F1EDF3",
+        "--fontColor1": "#A3D1CC",
+        "--fontColor2": "#0A020E",
+      },
+      ".theme2": {
+        "--mainColor": "#256675",
+        "--supColor": "#17525F",
+        "--bgColor": "#F1EDF3",
+        "--fontColor1": "#A3D1CC",
+        "--fontColor2": "#0A020E",
+      },
+      ".theme3": {
+        "--mainColor": "#F20231",
+        "--supColor": "#0C5D7B",
+        "--bgColor": "#F8E4CC",
+        "--fontColor1": "#EFBF7F",
+        "--fontColor2": "#12103D",
+      },
+      ".theme4": {
+        "--mainColor": "#407F3E",
+        "--supColor": "#89B449",
+        "--bgColor": "#E7E0C4",
+        "--fontColor1": "#DBD468",
+        "--fontColor2": "#0A020E",
+      },
+      ".theme5": {
+        "--mainColor": "#2E77AE",
+        "--supColor": "#2377AE",
+        "--bgColor": "#E0EAF5",
+        "--fontColor1": "#FF8E2B",
+        "--fontColor2": "#0A020E",
+      },
+    };
+
+    // Apply the CSS variables to the :root
+    var root = document.documentElement;
+    var selectedTheme = themeCSS[themeClass];
+    for (var variable in selectedTheme) {
+      if (selectedTheme.hasOwnProperty(variable)) {
+        root.style.setProperty(variable, selectedTheme[variable]);
+      }
+    }
+
+    // Save the selected theme in localStorage
+    localStorage.setItem("selectedTheme", themeClass);
+  });
+});
+
+// Check for a saved theme in localStorage and apply it on page load
+document.addEventListener("DOMContentLoaded", function () {
+  var savedTheme = localStorage.getItem("selectedTheme");
+  if (savedTheme) {
+    // Trigger a click on the corresponding list item to apply the saved theme
+    document.querySelector('ul li[data-theme="' + savedTheme + '"]').click();
+  } else {
+    // Set default theme (theme1)
+    // Hide all logos except the first one (theme1)
+    document
+      .querySelectorAll(".navbar-brand img")
+      .forEach(function (img, index) {
+        if (index === 0) {
+          img.style.display = "block";
+        } else {
+          img.style.display = "none";
+        }
+      });
+  }
+});
+
+// Toggle theme
+document.querySelector(".toggle").addEventListener("click", function () {
+  var themesElement = document.querySelector(".themes");
+  if (themesElement.style.right === "0px") {
+    themesElement.style.right = "-140px";
+  } else {
+    themesElement.style.right = "0px";
+  }
 });

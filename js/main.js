@@ -13,6 +13,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Nav Bar
+let list = document.querySelectorAll(".nav-item a");
+
+list.forEach((li) => {
+  li.addEventListener("click", removeActive);
+});
+
+function removeActive() {
+  list.forEach((li) => {
+    li.classList.remove("active");
+    this.classList.add("active");
+  });
+}
+
 // Portfolio
 document.addEventListener("DOMContentLoaded", function () {
   const galleryContainer = document.querySelector(".img-box");

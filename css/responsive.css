@@ -44,10 +44,14 @@
     font-size: 3.5vw;
   }
 
-  .contact .info .social {
-    font-size: 3vw;
+  .contact .info .social a {
+    font-size: 4vw;
   }
   
+  .contact .info .social {
+    font-size: 4vw;
+  }
+
   footer {
     font-size: 4vw;
   }

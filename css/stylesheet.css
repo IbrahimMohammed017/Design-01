@@ -134,8 +134,8 @@ nav .navbar-toggler i {
   height: 100vh;
   max-height: 768px;
   position: relative;
-  background-size: cover;
   background: url(../images/landing.jpg);
+  background-size: cover;
 }
 
 .slider h1,
